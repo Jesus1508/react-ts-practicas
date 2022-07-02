@@ -4,16 +4,16 @@ import { render } from 'react-dom';
 
 const nombres = ['Merce', 'Dafhne', 'Lia', 'Jesus'];
 
-const Saludar = () => {
+const Saludar = (props) => {
   const nombre = 'Jesus';
 
-  return <p>Hola {nombre}</p>;
+  return <p>Hola {props.nombre}</p>;
 };
 
 const App = () => {
   return (
     <h1>
-      <Saludar />
+      <Saludar nombre="Lia" />
     </h1>
   );
 };
