@@ -12,15 +12,15 @@ function getNombres() {
 }
 
 const Nombres = () => {
-  return <ul>{getNombres()}</ul>
-}
+  return <ul>{getNombres()}</ul>;
+};
 
 const App = () => {
   return (
     <div>
       <Nombres />
     </div>
-  )
-}
+  );
+};
 
 render(<App />, document.getElementById('react-app'));
