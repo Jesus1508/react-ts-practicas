@@ -2,26 +2,19 @@ import * as React from 'react';
 import { Component } from 'react';
 import { render } from 'react-dom';
 
-const nombres = ['Merce', 'Dafhne', 'Lia', 'Jesus'];
-
-const Saludar = ({ nombre, idioma = 'en' }) => {
-  const saludo = idioma === 'es' ? 'Hola' : 'Hello';
+const Button = () => {
   return (
-    <p>
-      {saludo} {nombre}
-    </p>
+    <div>
+      <p>Presionado: 0</p>
+      <button>Click me!</button>
+    </div>
   );
 };
-/*
-Saludar.defaultProps = {
-  idioma: 'en',
-};
-*/
 const App = () => {
   return (
-    <h1>
-      <Saludar nombre="Lia" idioma="es" />
-    </h1>
+    <div>
+      <Button />
+    </div>
   );
 };
 
