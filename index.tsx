@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 
 const nombres = ['Merce', 'Dafhne', 'Lia', 'Jesus'];
 
-const Saludar = ({ nombre, idioma }) => {
+const Saludar = ({ nombre, idioma = 'en' }) => {
   const saludo = idioma === 'es' ? 'Hola' : 'Hello';
   return (
     <p>
@@ -12,11 +12,11 @@ const Saludar = ({ nombre, idioma }) => {
     </p>
   );
 };
-
+/*
 Saludar.defaultProps = {
   idioma: 'en',
 };
-
+*/
 const App = () => {
   return (
     <h1>
