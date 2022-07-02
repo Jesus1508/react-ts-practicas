@@ -7,6 +7,7 @@ componentDidUpdate();
 componentWillUnmount();
 
 const Button = () => {
+  // Aqui no debe haber efectos secundarios
   return <button>Enviar</button>;
 };
 
@@ -15,13 +16,13 @@ const App = () => <Button />;
 render(<App />, document.getElementById('react-app'));
 
 function componentDidUpdate() {
-throw new Error('Function not implemented.');
+  throw new Error('Function not implemented.');
 }
 
 function componentDidMount() {
-throw new Error('Function not implemented.');
+  throw new Error('Function not implemented.');
 }
 
 function componentWillUnmount() {
-throw new Error('Function not implemented.');
+  throw new Error('Function not implemented.');
 }
