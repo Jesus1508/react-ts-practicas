@@ -4,14 +4,19 @@ import { render } from 'react-dom';
 
 const nombres = ['Merce', 'Dafhne', 'Lia', 'Jesus'];
 
-const Saludar = ({ nombre }) => {
-  return <p>Hola {nombre}</p>;
+const Saludar = ({ nombre, idioma }) => {
+  const saludo = idioma === 'es' ? 'Hola' : 'Hello';
+  return (
+    <p>
+      {saludo} {nombre}
+    </p>
+  );
 };
 
 const App = () => {
   return (
     <h1>
-      <Saludar nombre="Lia" />
+      <Saludar nombre="Lia" idioma="es" />
     </h1>
   );
 };
