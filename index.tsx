@@ -6,12 +6,13 @@ const Form = () => {
   let [title, setTitle] = useState('');
   let [body, setBody] = useState('');
 
-  const sendForm = (ev: { preventDefault: () => void }) => {
+  const sendForm = (ev) => {
+    ev.preventDefault();
     fetch('https://jsonplaceholder.typicode.com/posts', {
       method: 'POST',
       body: JSON.stringify({
-        title: 'title',
-        body: 'body',
+        title: title,
+        body: body,
         userId: 1,
       }),
       headers: {
@@ -33,6 +34,7 @@ const Form = () => {
         <input
           type="text"
           id="title"
+          value={title}
           onChange={(ev) => setTitle(ev.target.value)}
         />
       </div>
@@ -40,6 +42,7 @@ const Form = () => {
         <label htmlFor="body">Publicación</label>
         <textarea
           id="body"
+          value={body}
           onChange={(ev) => setBody(ev.target.value)}
         ></textarea>
       </div>
