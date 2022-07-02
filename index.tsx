@@ -12,7 +12,14 @@ function getNombres() {
 }
 
 const Nombres = () => {
-  return <ul>{getNombres()}</ul>;
+  return (
+    <ul>
+      {nombres.map((nombre) => (
+        <li>{nombre}</li>
+      ))}
+    </ul>
+  );
+  //return <ul>{getNombres()}</ul>;
 };
 
 const App = () => {
