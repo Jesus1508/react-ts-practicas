@@ -13,6 +13,10 @@ const Saludar = ({ nombre, idioma }) => {
   );
 };
 
+Saludar.defaultProps = {
+  idioma: 'en',
+};
+
 const App = () => {
   return (
     <h1>
