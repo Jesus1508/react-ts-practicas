@@ -9,7 +9,7 @@ const Form = () => {
   return (
     <form>
       <div>
-        <label for="title">Título</label>
+        <label htmlFor="title">Título</label>
         <input
           type="text"
           id="title"
@@ -17,7 +17,7 @@ const Form = () => {
         />
       </div>
       <div>
-        <label for="body">Publicación</label>
+        <label htmlFor="body">Publicación</label>
         <textarea
           id="body"
           onChange={(ev) => setBody(ev.target.value)}
