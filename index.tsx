@@ -6,8 +6,8 @@ const nombres = ['Merce', 'Dafhne', 'Lia', 'Jesus'];
 const Nombres = () => {
   return (
     <ul>
-      {nombres.map((nombre) => (
-        <li>{nombre}</li>
+      {nombres.map((nombre, index) => (
+        <li key={index}>{nombre}</li>
       ))}
     </ul>
   );
