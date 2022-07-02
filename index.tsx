@@ -1,12 +1,14 @@
 import * as React from 'react';
-import { Component } from 'react';
+import { useState } from 'react';
 import { render } from 'react-dom';
 
 const Button = () => {
+  const [counter, setCounter] = useState(0);
+
   return (
     <div>
-      <p>Presionado: 0</p>
-      <button>Click me!</button>
+      <p>Presionado: {counter}</p>
+      <button onClick={()=>setCounter(counter+1)}>Click me!</button>
     </div>
   );
 };
