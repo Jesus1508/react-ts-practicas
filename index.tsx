@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 
 const nombres = ['Merce', 'Dafhne', 'Lia', 'Jesus'];
 
+/*
 function getNombres() {
   const elementosLista = [];
   for (var i = 0; i < nombres.length; i++) {
@@ -10,7 +11,7 @@ function getNombres() {
   }
   return elementosLista;
 }
-
+*/
 const Nombres = () => {
   return (
     <ul>
