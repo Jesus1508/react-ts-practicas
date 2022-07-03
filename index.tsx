@@ -2,9 +2,14 @@ import * as React from 'react';
 import { useState } from 'react';
 import { render } from 'react-dom';
 
-const Form = () => {
+const Form = ({ showed }) => {
   let [title, setTitle] = useState('');
   let [body, setBody] = useState('');
+
+  React.useEffect(() => {
+    //Actualizar el dom
+    console.log(':)');
+  }, [showed]);
 
   const sendForm = (ev) => {
     ev.preventDefault();
@@ -51,10 +56,20 @@ const Form = () => {
   );
 };
 
+const Acordion = () => {
+  const [show, setShow] = useState(false);
+  return (
+    <div>
+      <button onClick={() => setShow(true)}>Mostrar formulario </button>
+      {show && <Form showed={show} />}
+    </div>
+  );
+};
+
 const App = () => {
   return (
     <div>
-      <Form />
+      <Acordion />
     </div>
   );
 };
