@@ -4,13 +4,13 @@ import { render } from 'react-dom';
 const Saludo = () => {
   const nombre = 'Jesus';
   const idioma = 'es';
-  return [
+  return (
     <div>
       {
         idioma === 'en' ? <p>Hello</p> : <p>Hola</p>
       }
     </div>
-  ];
+  );
 };
 
 const App = () => {
